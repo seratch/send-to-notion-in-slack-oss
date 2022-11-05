@@ -1,0 +1,56 @@
+{
+    "display_information": {
+        "name": "Send to Notion",
+        "description": "Create Notion database records from Slack",
+        "background_color": "#4d484d",
+        "long_description": "This Slack integration app provides the ways to send data to Notion databases from Slack. Once you allow this app to access your Notion databases, you can build your own data submission modal views without coding."
+    },
+    "features": {
+        "app_home": {
+            "home_tab_enabled": true,
+            "messages_tab_enabled": false,
+            "messages_tab_read_only_enabled": true
+        },
+        "bot_user": {
+            "display_name": "Send to Notion",
+            "always_online": true
+        },
+        "shortcuts": [
+            {
+                "name": "Submit data to Notion",
+                "type": "global",
+                "callback_id": "open-notion-form",
+                "description": "Create a new Notion database record"
+            }
+        ],
+        "slash_commands": [
+            {
+                "command": "/send-to-notion",
+                "description": "Create a Notion database row",
+                "should_escape": false
+            }
+        ]
+    },
+    "oauth_config": {
+        "scopes": {
+            "bot": [
+                "commands",
+                "users:read",
+                "chat:write"
+            ]
+        }
+    },
+    "settings": {
+        "event_subscriptions": {
+            "bot_events": [
+                "app_home_opened"
+            ]
+        },
+        "interactivity": {
+            "is_enabled": true
+        },
+        "org_deploy_enabled": true,
+        "socket_mode_enabled": true,
+        "token_rotation_enabled": false
+    }
+}
