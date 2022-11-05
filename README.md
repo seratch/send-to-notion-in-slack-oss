@@ -11,11 +11,9 @@ As this is a bit simpler implementation than the hosted one, there are a few lim
 * This app connects a pair of a single Slack Org/Workspace and a single Notion Workspace
 * This app is supposed to be installed once by your Notion Workspace admin
 
-### This app is free! but we'd appreciate your donations!
+### This app is free! but we'd appreciate your support!
 
-Anyone can use this app under the MIT license, but if you like this app, your donation to the creator of this app would be greatly appreciated!
-
-(Donation link here)
+Anyone can use this app under the MIT license, but if you like this app, [your support to the creator of this app](https://www.patreon.com/seratch_oss/membership) would be greatly appreciated!
 
 ## Steps to configure this app
 
@@ -85,6 +83,51 @@ On the Notion side, all you need to do are to create a new integration and share
 * Add the newly created integration
 * Repeat this step for all the databases that you want to send data from Slack
 
+### Deploy this app to somewhere you manage
+
+If you want to use the pre-built Docker image, you can pull it this way:
+
+```bash
+docker pull ghcr.io/seratch/send-to-notion-in-slack-oss:main
+```
+
+If you want to run the app locally, the following steps should work for you.
+
+```bash
+export SLACK_APP_TOKEN=xapp-...
+export SLACK_BOT_TOKEN=xoxb-...
+export NOTION_API_TOKEN=secret_...
+docker run \
+  --platform linux/amd64 \
+  -e SLACK_APP_TOKEN=$SLACK_APP_TOKEN \
+  -e SLACK_BOT_TOKEN=$SLACK_BOT_TOKEN \
+  -e NOTION_API_TOKEN=$NOTION_API_TOKEN \
+  -it ghcr.io/seratch/send-to-notion-in-slack-oss:main
+```
+
+Please read https://github.com/seratch/send-to-notion-in-slack-oss/pkgs/container/send-to-notion-in-slack-oss for more details.
+
+#### Build a Docker image using the Dockerfile
+
+You can build a new image by running the following command:
+
+```bash
+docker build . -t your-repo/send-to-notion
+```
+
+#### Spin up a new running app with the image
+
+If you want to run the app locally, the following steps should work for you.
+
+```bash
+export SLACK_APP_TOKEN=xapp-...
+export SLACK_BOT_TOKEN=xoxb-...
+export NOTION_API_TOKEN=secret_...
+docker run -e SLACK_APP_TOKEN=$SLACK_APP_TOKEN -e SLACK_BOT_TOKEN=$SLACK_BOT_TOKEN -e NOTION_API_TOKEN=$NOTION_API_TOKEN -it your-repo/send-to-notion
+```
+
+You can set up your production infra to do the same for deployments.
+
 ## How to run the app
 
 There are three ways to open the modal dialog to send data to Notion.
@@ -95,8 +138,6 @@ There are three ways to open the modal dialog to send data to Notion.
 
 Please refer to [the product page](https://seratch.notion.site/Send-to-Notion-in-Slack-2f7fd79ee4e64ec5b8053227f548df78) for more details!
 
-### This app is free! but we'd appreciate your donations!
+### This app is free! but we'd appreciate your support!
 
-Anyone can use this app under the MIT license, but if you like this app, your donation to the creator of this app would be greatly appreciated!
-
-(Donation link here)
+Anyone can use this app under the MIT license, but if you like this app, [your support to the creator of this app](https://www.patreon.com/seratch_oss/membership) would be greatly appreciated!
