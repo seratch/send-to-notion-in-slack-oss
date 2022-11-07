@@ -11,9 +11,9 @@ As this is a bit simpler implementation than the hosted one, there are a few lim
 * This app connects a pair of a single Slack Org/Workspace and a single Notion Workspace
 * This app is supposed to be installed once by your Notion Workspace admin
 
-### This app is free! but we'd appreciate your support!
+### This app is free! but your support would be appreciated ❤️
 
-Anyone can use this app under the MIT license, but if you like this app, [your support to the creator of this app](https://www.patreon.com/seratch_oss/membership) would be greatly appreciated!
+Anyone can use and modify this app under the MIT license, but [buying me a coffee](https://www.buymeacoffee.com/seratchoss) would be greatly appreciated!
 
 ## Steps to configure this app
 
@@ -138,6 +138,6 @@ There are three ways to open the modal dialog to send data to Notion.
 
 Please refer to [the product page](https://seratch.notion.site/Send-to-Notion-in-Slack-2f7fd79ee4e64ec5b8053227f548df78) for more details!
 
-### This app is free! but we'd appreciate your support!
+### This app is free! but your support would be appreciated ❤️
 
-Anyone can use this app under the MIT license, but if you like this app, [your support to the creator of this app](https://www.patreon.com/seratch_oss/membership) would be greatly appreciated!
+Anyone can use and modify this app under the MIT license, but [buying me a coffee](https://www.buymeacoffee.com/seratchoss) would be greatly appreciated!
